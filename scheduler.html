@@ -16,7 +16,21 @@
     document.addEventListener('DOMContentLoaded', function() {
       var calendarEl = document.getElementById('calendar');
       var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth'
+        initialView: 'dayGridMonth',
+        events: [
+            { // this object will be "parsed" into an Event Object
+                title: 'Vuelo mk', // a property!
+                start: '2022-09-11', // a property!
+            },
+            { // this object will be "parsed" into an Event Object
+                title: 'otro vuelo mk', // a property!
+                start: '2022-09-21', // a property!
+            },
+            { // this object will be "parsed" into an Event Object
+                title: 'vuelo de ahorita', // a property!
+                start: '2022-09-29', // a property!
+            }
+        ]
       });
       calendar.render();
     });
