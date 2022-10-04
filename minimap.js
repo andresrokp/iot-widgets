@@ -14,23 +14,23 @@ function positionConversion(origXPos, origYPos){
 
     // let point = { x : origXPos, y : origYPos};
     let echoCorners = {
-        // '15-14-inf':{ x : -74.135718, y: 4.689274},
-        // '15-14-sup':{ x : -74.135314, y: 4.689811},
-        // '14-13-inf':{ x : -74.136262, y: 4.689672},
-        // '14-13-sup':{ x : -74.135851, y: 4.690206},
+        '15-14-inf':{ x : -74.13573145866395, y: 4.6892443209014045},
+        '15-14-sup':{ x : -74.13531303405763, y: 4.689805699184382},
+        '14-13-inf':{ x : -74.13626790046693, y: 4.6896586715824515},
+        '14-13-sup':{ x : -74.1358467936516, y: 4.690225395986895},
         // '13-12-inf':{ x : -74.13676142692567, y: 4.690043616511041},
         // '13-12-sup':{ x : -74.13625717163087, y: 4.690714596400146},
         // '12-11-inf':{ x : -74.13728713989259, y: 4.690439254133196},
         // '12-11-sup':{ x : -74.13679361343385, y: 4.691118253313656},
         'linea-roja-11-10':{x:-74.13780212402345,y:4.69083221830631},
         'linea-roja-15-14':{x:-74.1357207298279,y:4.689255013825293},
-        'esquina-extrema-inf':{x:-74.13452982902528,y:4.685881388218541},
-        'esquina-extrema-izq':{x:-74.14269447326662,y:4.693879688058168},
-        'esquina-extrema-inf-2':{x:-74.13561880588533,y:4.6866940538791635},
-        'esquina-calle-cuadros':{x:-74.13502871990205,y:4.687463946791265}
+        // 'esquina-extrema-inf':{x:-74.13452982902528,y:4.685881388218541},
+        // 'esquina-extrema-izq':{x:-74.14269447326662,y:4.693879688058168},
+        // 'esquina-extrema-inf-2':{x:-74.13561880588533,y:4.6866940538791635},
+        // 'esquina-calle-cuadros':{x:-74.13502871990205,y:4.687463946791265}
     }
 
-    // let point = { x : origXPos, y : origYPos}; // este es el propio, UncommentToGo
+    // let point = { x : origXPos, y : origYPos}; // este es el propio, CommentToTest
 
     // prueba de esquinas echos
     let cornersArray = Object.keys(echoCorners);
