@@ -92,3 +92,7 @@ function markerImage(data, images){
         size: 25 // aumentar
     }
 }
+
+function labelFunction(data){
+    return '<span style="text-shadow: 2px 2px 4px black">'+data.entityName+'</span>'
+}
