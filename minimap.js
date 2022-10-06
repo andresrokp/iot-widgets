@@ -96,3 +96,19 @@ function markerImage(data, images){
 function labelFunction(data){
     return '<span style="text-shadow: 2px 2px 4px black">'+data.entityName+'</span>'
 }
+
+function tooltipFunction(data){
+    let num = data.entityName[data.entityName.length-1].charCodeAt(0);
+    let symbol = "&#128077;";
+    if (data.temperature > 70) symbol = "&#128293;";
+    if (data.temperature < 30) symbol = "&#127378;";
+
+
+    return  "<b>Vehículo : ${entityName}</b><br/><br/>"+
+            "<b>Latitude:</b> ${latitude:7}<br/>"+
+            "<b>Longitude:</b> ${longitude:7}<br/>"+
+            "<b>Temperature:</b> ${temperature} °C : "+symbol+"<br/>"+
+            "<b>Echo:</b> ${echo:0}<br/>"+
+            "<small>Conductor: Juanchito Pérez</small><br>"+
+            "<img src='https://randomuser.me/api/portraits/med/men/"+num+".jpg'>";
+}
