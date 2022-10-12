@@ -3,23 +3,25 @@ function mapCustomActionState(widgetContext,entityId,entityName){
 
     console.log("widgetContext ~~ ", widgetContext)
     console.log("$injector ~~", $injector)
-    console.log("")
+    console.log("entityId ~~", entityId)
+    console.log("entityName ~~", entityName)
 
-    $injector.get(widgetContext.servicesMap.get('assetService')).getAsset(entityId.id).subscribe(function(device) 
+    $injector.get(widgetContext.servicesMap.get('assetService')).getAsset(entityId.id).subscribe(function(asset) 
     {
-            openDashboardState('terminal_de_carga')
-    //         if (device.type == 'zonaAeropuerto') 
-    // 		{
-    //             openDashboardState('terminal_de_carga')
-    //         }
-    //         else if(device.type == 'water sensor') 
-    // 		{
-    //             openDashboardState('water_state')
-    //         }
-    //         else 
-    // 		{
-    //             openDashboardState('temperature_state')
-    //         }
+            console.log(asset);
+            
+            if (asset.name == 'Terminal de Carga') 
+            {
+                openDashboardState('terminal_de_carga');
+            }
+            else if(asset.name == 'pareceElTaller') 
+            {
+                openDashboardState('datos_vehiculo');
+            }
+            else if(asset.name == 'Puente Aereo') 
+            {
+                openDashboardState('puente_aereo');
+            }
     });
 
     function openDashboardState(stateId) 
@@ -29,7 +31,6 @@ function mapCustomActionState(widgetContext,entityId,entityName){
             entityId: entityId,
             entityName: entityName
         }
-
         widgetContext.stateController.openState(stateId, params,false);
     }
 }
